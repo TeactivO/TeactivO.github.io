@@ -15,11 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
             <h3>${producto.nombre}</h3>
             <p>${producto.descripcion}</p>
             <p>Precio: $${producto.precio.toFixed(2)}</p>
-            <script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
-              data-preference-id="${producto.preference_id}" data-source="button">
-            </script>
           </div>
         `;
+
+        // Crear el script de Mercado Pago
+        const script = document.createElement('script');
+        script.src = "https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js";
+        script.setAttribute('data-preference-id', producto.preference_id);
+        script.setAttribute('data-source', 'button');
+
+        // Agregar el script al productoDiv
+        productoDiv.appendChild(script);
 
         productosContainer.appendChild(productoDiv);
       });
