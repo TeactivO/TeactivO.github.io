@@ -1,0 +1,63 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #8B4513; /* Marrón té */
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+main {
+  padding: 1em;
+}
+
+#catalogo {
+  margin-bottom: 2em;
+}
+
+.producto {
+  border: 1px solid #ddd;
+  padding: 1em;
+  margin-bottom: 1em;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+  width: 100px;
+  height: 100px;
+  margin-right: 1em;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.producto h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+.producto p {
+  margin-bottom: 0;
+  font-size: 0.9em;
+}
+
+button {
+  background-color: #A0522D; /* Marrón más oscuro */
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #6B8E23; /* Verde oliva */
+}
