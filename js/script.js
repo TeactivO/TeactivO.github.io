@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Cargar productos desde productos.json
   fetch('productos.json')
     .then(response => response.json())
     .then(productos => {
@@ -7,25 +6,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
       productos.forEach(producto => {
         const productoDiv = document.createElement('div');
-        productoDiv.classList.add('producto');
+        productoDiv.classList.add('col', 'mb-5');
 
         productoDiv.innerHTML = `
-          <img src="${producto.imagen}" alt="${producto.nombre}">
-          <div>
-            <h3>${producto.nombre}</h3>
-            <p>${producto.descripcion}</p>
-            <p>Precio: $${producto.precio.toFixed(2)}</p>
+          <div class="card h-100">
+            <!-- Product image -->
+            <img class="card-img-top" src="${producto.imagen}" alt="${producto.nombre}" />
+            <!-- Product details -->
+            <div class="card-body p-4">
+              <div class="text-center">
+                <!-- Product name -->
+                <h5 class="fw-bolder">${producto.nombre}</h5>
+                <!-- Product description -->
+                <p>${producto.descripcion}</p>
+                <!-- Product price -->
+                <p class="fw-bold">$${producto.precio.toFixed(2)}</p>
+              </div>
+            </div>
+            <!-- Product actions -->
+            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+              <div class="text-center">
+                <script src="https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js"
+                        data-preference-id="${producto.preference_id}"
+                        data-source="button"></script>
+              </div>
+            </div>
           </div>
         `;
-
-        // Crear el script de Mercado Pago
-        const script = document.createElement('script');
-        script.src = "https://www.mercadopago.cl/integrations/v1/web-payment-checkout.js";
-        script.setAttribute('data-preference-id', producto.preference_id);
-        script.setAttribute('data-source', 'button');
-
-        // Agregar el script al productoDiv
-        productoDiv.appendChild(script);
 
         productosContainer.appendChild(productoDiv);
       });

@@ -1,30 +1,57 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TeactivO - Tu tienda de té online</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>TeactivO</h1>
-    <p>Descubre una selección de tés de alta calidad.</p>
-  </header>
-
-  <main>
-    <section id="catalogo">
-      <h2>Nuestro Catálogo</h2>
-      <div id="productos-container">
-        <!-- Aquí se insertarán los productos dinámicamente con JavaScript -->
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2023 TeactivO. Todos los derechos reservados.</p>
-  </footer>
-
-  <script src="js/script.js"></script>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>TeactivO - Tienda de Té</title>
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap) -->
+        <link href="styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#">TeactivO</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Sobre Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header -->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder">Descubre nuestros mejores tés</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Calidad y sabor en cada taza</p>
+                </div>
+            </div>
+        </header>
+        <!-- Products Section -->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div id="productos-container" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <!-- Aquí se insertarán los productos dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">&copy; 2023 TeactivO. Todos los derechos reservados.</p></div>
+        </footer>
+        <!-- Bootstrap core JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Custom script for loading products -->
+        <script src="js/script.js"></script>
+    </body>
 </html>
